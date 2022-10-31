@@ -1,0 +1,292 @@
+<html xmlns:ng="http://docbook.org/docbook-ng"><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Semestr&aacute;ln&iacute; pr&aacute;ce z p&#345;edm&#283;tu 4IZ238</title><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book"><div class="titlepage"><div><div><h1 class="title"><a name="d5e1"></a>Semestr&aacute;ln&iacute; pr&aacute;ce z p&#345;edm&#283;tu 4IZ238</h1></div><div><div class="author"><h3 class="author"><span class="firstname">Vojt&#283;ch</span> <span class="surname">Nerad</span></h3><code class="email">&lt;<a class="email" href="mailto:nerv01@vse.cz">nerv01@vse.cz</a>&gt;</code></div></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="preface"><a href="#d5e9">&Uacute;vod</a></span></dt><dt><span class="chapter"><a href="#d5e12">1. XML dokument</a></span></dt><dd><dl><dt><span class="sect1"><a href="#d5e15">Popis element&#367;</a></span></dt><dt><span class="sect1"><a href="#d5e218">Uk&aacute;zka z XML dokumentu</a></span></dt></dl></dd><dt><span class="chapter"><a href="#d5e222">2. Sch&eacute;mata</a></span></dt><dd><dl><dt><span class="sect1"><a href="#d5e227">XML Schema</a></span></dt><dt><span class="sect1"><a href="#d5e232">Schematron</a></span></dt></dl></dd><dt><span class="chapter"><a href="#d5e237">3. Transormace do HTML</a></span></dt><dd><dl><dt><span class="sect1"><a href="#d5e242">Kask&aacute;dov&eacute; styly</a></span></dt></dl></dd><dt><span class="chapter"><a href="#d5e248">4. Transformace do PDF</a></span></dt><dd><dl><dt><span class="sect1"><a href="#d5e253">Uk&aacute;zka transformace do PDF</a></span></dt></dl></dd></dl></div><div class="list-of-tables"><p><b>List of Tables</b></p><dl><dt>1.1. <a href="#d5e18">Popis element&#367;</a></dt></dl></div><div class="preface"><div class="titlepage"><div><div><h1 class="title"><a name="d5e9"></a>&Uacute;vod</h1></div></div></div><p>Text, kter&yacute; pr&aacute;v&#283; &#269;tete, je dokumentace slou&#382;&iacute;c&iacute; k detailnimu popisu m&eacute; semestr&aacute;ln&iacute;
+            pr&aacute;ce z p&#345;edm&#283;tu 4IZ238. T&eacute;matem pr&aacute;ce je katalog mobiln&iacute; telefon&#367;, kter&yacute; v sob&#283;
+            uchov&aacute;v&aacute; detailn&iacute; informace o specifikac&iacute;ch telefon&#367;. Pr&aacute;ce se skl&aacute;d&aacute; z n&#283;kolika &#269;&aacute;st&iacute;.
+            XML dolkumentu obsahuj&iacute;c&iacute; informace. XSD sch&eacute;matu, kontroluj&iacute;c&iacute; spr&aacute;vnost z&aacute;pis&#367; do
+            dokumentu. XSLT transformaci dat z XML do HTML str&aacute;nky. XSL-FO transformaci dat z XML do
+            PDF fokumentu. A tohoto DocBooku.</p></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="d5e12"></a>Chapter&nbsp;1.&nbsp;XML dokument</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="sect1"><a href="#d5e15">Popis element&#367;</a></span></dt><dt><span class="sect1"><a href="#d5e218">Uk&aacute;zka z XML dokumentu</a></span></dt></dl></div><p>Tato kapitola obsahuje informace o detailn&iacute; struktu&#345;e XML dokumentu.</p><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e15"></a>Popis element&#367;</h2></div></div></div><div class="table"><a name="d5e18"></a><p class="title"><b>Table&nbsp;1.1.&nbsp;Popis element&#367;</b></p><div class="table-contents"><table class="table" summary="Popis element&#367;" border="1"><colgroup><col class="c1"><col class="c2"><col class="newCol3"></colgroup><thead><tr><th>N&aacute;zev elementu</th><th>P&#345;&iacute;klad hodnoty</th><th>Popis elementu</th></tr></thead><tbody><tr><td>devices</td><td>/ko&#345;enov&yacute; element/</td><td>Ko&#345;enov&yacute; element pro cel&yacute; dokument</td></tr><tr><td>manufacturers/manufacturer</td><td>OnePlus</td><td>Mo&#382;n&aacute; zna&#269;ky telefon&#367;, pro kontrolu skrze keyref</td></tr><tr><td>device</td><td>/ko&#345;enov&yacute; element/</td><td>Ko&#345;enov&yacute; element pro dan&eacute; za&#345;&iacute;zen&iacute;</td></tr><tr><td>brand</td><td>Samsung</td><td>Zna&#269;ka za&#345;&iacute;zen&iacute;</td></tr><tr><td>model/name</td><td>S10e</td><td>N&aacute;zev modelu za&#345;&iacute;zen&iacute;</td></tr><tr><td>model/code</td><td>SM-G790F</td><td>Unik&aacute;tn&iacute; k&oacute;d za&#345;&iacute;zen&iacute; od v&yacute;robce</td></tr><tr><td>releasedate</td><td>2019-03-08</td><td>Datum vyd&aacute;n&iacute; za&#345;&iacute;zen&iacute;</td></tr><tr><td>color</td><td>Prism Black</td><td>Barva za&#345;&iacute;zen&iacute;</td></tr><tr><td>price</td><td>9999</td><td>Cena za&#345;&iacute;zen&iacute;</td></tr><tr><td>price/@currency</td><td>CZK</td><td>M&#283;na ve kter&eacute; je cena uvedena</td></tr><tr><td>display</td><td>/ko&#345;enov&yacute; element/</td><td>&nbsp;</td></tr><tr><td>display/type</td><td>AMOLED</td><td>Typ panelu displaye</td></tr><tr><td>display/size</td><td>5.8</td><td>&Uacute;hop&#345;&iacute;&#269;ka displaye</td></tr><tr><td>resolution/width</td><td>1080</td><td>&#352;&iacute;&#345;ka rozli&#353;en&iacute; v px.</td></tr><tr><td>resolution/height</td><td>2280</td><td>V&yacute;&#353;ka rozli&#353;en&iacute; v px.</td></tr><tr><td>resolution/aspect_ratio</td><td>19:9</td><td>Pom&#283;r stran displaye</td></tr><tr><td>chipset</td><td>/ko&#345;enov&yacute; element/</td><td>&nbsp;</td></tr><tr><td>brand</td><td>Samsung</td><td>V&yacute;robce chipsetu</td></tr><tr><td>model</td><td>Exynos 9820</td><td>Model chipsetu</td></tr><tr><td>cores</td><td>/ko&#345;enov&yacute; element/</td><td>&nbsp;</td></tr><tr><td>core/name</td><td>Exynos M4</td><td>N&aacute;zev j&aacute;dra procesoru</td></tr><tr><td>core/frequency</td><td>2.73</td><td>Frekvence j&aacute;dra procesoru</td></tr><tr><td>core/quantity</td><td>2</td><td>Po&#269;et dan&yacute;ch jader kter&eacute; chipset obsahuje.s</td></tr><tr><td>gpu</td><td>Mali-G76 MP12</td><td>N&aacute;zev grafick&eacute;ho procesoru.</td></tr><tr><td>cameras/rear</td><td>/ko&#345;enov&yacute; element/</td><td>Hromadn&yacute; element obsahuj&iacute;c&iacute; zadn&iacute; kamery.</td></tr><tr><td>cameras/front</td><td>/ko&#345;enov&yacute; element/</td><td>Hromadn&yacute; element obsahuj&iacute;c&iacute; p&#345;edn&iacute; kamery.</td></tr><tr><td>camera/resolution</td><td>12</td><td>Rozli&#353;en&iacute; fotoapar&aacute;tu v Mpx.</td></tr><tr><td>camera/focallength</td><td>26</td><td>Ohniskov&aacute; vzd&aacute;lenost fotoapar&aacute;tu v mm.</td></tr><tr><td>camera/aperture</td><td>1.5-2.4</td><td>Clona fotoapar&aacute;tu</td></tr><tr><td>camera/category</td><td>Prim&aacute;rn&iacute;</td><td>Kategorie fotoapar&aacute;tu</td></tr><tr><td>memory/ram</td><td>6</td><td>Velikost opera&#269;n&iacute; pam&#283;ti.</td></tr><tr><td>memory/internal</td><td>128</td><td>Intern&iacute; pam&#283;&#357; telefonu</td></tr><tr><td>memory/expansionslot</td><td>microSDXC</td><td>Typ slotu pro karty roz&#353;i&#345;uj&iacute;c&iacute; pam&#283;&#357;.</td></tr><tr><td>system/name</td><td>Android</td><td>N&aacute;zev syst&eacute;mu telefonu.</td></tr><tr><td>system/version</td><td>9.0</td><td>Verze syst&eacute;mu telefonu.</td></tr><tr><td>system/overlay</td><td>One UI 3.0</td><td>Nadstavba syst&eacute;mu telefonu.</td></tr><tr><td>battery/size</td><td>3100</td><td>Velikost baterie telefonu vyj&aacute;d&#345;ena v mAh.</td></tr><tr><td>charging/wired</td><td>15</td><td>Rychlost dr&aacute;tov&eacute;ho nab&iacute;jen&iacute; telefonu.</td></tr><tr><td>charging/wireless</td><td>15</td><td>Rychlost bezdr&aacute;tov&eacute;ho nab&iacute;jen&iacute; telefonu.</td></tr><tr><td>connectors/connector</td><td>USB-C</td><td>Konektory telefonu.</td></tr><tr><td>comms/comm</td><td>Wi-Fi 6</td><td>Seznam komunika&#269;n&iacute;ch technologi&iacute; telefonu.</td></tr><tr><td>features/feature</td><td>&#268;te&#269;ka otisk&#367;</td><td>Seznam funkc&iacute; telefonu.</td></tr><tr><td>dimensions/height</td><td>142.2</td><td>V&yacute;&#353;ka telefonu.</td></tr><tr><td>dimensions/width</td><td>69.9</td><td>&#352;&iacute;&#345;ka telefonu</td></tr><tr><td>dimensions/depth</td><td>7.9</td><td>Tlou&#353;&#357;ka telefonu.</td></tr><tr><td>weight</td><td>150</td><td>V&aacute;ha telefonu.</td></tr><tr><td>categories/category</td><td>Dotykov&yacute;</td><td>Kategorie, do kter&yacute;ch je telefon za&#345;azen.</td></tr></tbody></table></div></div><p><br class="table-break">
+            </p></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e218"></a>Uk&aacute;zka z XML dokumentu</h2></div></div></div><p> V uk&aacute;zkov&eacute;m dokumentu je vid&#283;t jeden ze z&aacute;znam&#367; o telefonu.
+                </p><pre class="programlisting">
+    <strong class="hl-tag" style="color: #000096">&lt;device</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"1"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;brand&gt;</strong>Samsung<strong class="hl-tag" style="color: #000096">&lt;/brand&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;model&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;name&gt;</strong>Galaxy S10e<strong class="hl-tag" style="color: #000096">&lt;/name&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;code&gt;</strong>SM-G970F<strong class="hl-tag" style="color: #000096">&lt;/code&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/model&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;releasedate&gt;</strong>2019-03-08<strong class="hl-tag" style="color: #000096">&lt;/releasedate&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;color&gt;</strong>Prism Black<strong class="hl-tag" style="color: #000096">&lt;/color&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;price</strong> <span class="hl-attribute" style="color: #F5844C">currency</span>=<span class="hl-value" style="color: #993300">"CZK"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>9999<strong class="hl-tag" style="color: #000096">&lt;/price&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;image</strong> <span class="hl-attribute" style="color: #F5844C">src</span>=<span class="hl-value" style="color: #993300">"img/SM-G970F.png"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+
+        <strong class="hl-tag" style="color: #000096">&lt;display&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;type&gt;</strong>AMOLED<strong class="hl-tag" style="color: #000096">&lt;/type&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;size&gt;</strong>5.8<strong class="hl-tag" style="color: #000096">&lt;/size&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;resolution&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;width&gt;</strong>1080<strong class="hl-tag" style="color: #000096">&lt;/width&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;height&gt;</strong>2280<strong class="hl-tag" style="color: #000096">&lt;/height&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;aspect_ratio&gt;</strong>19:9<strong class="hl-tag" style="color: #000096">&lt;/aspect_ratio&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;/resolution&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/display&gt;</strong>
+
+        <strong class="hl-tag" style="color: #000096">&lt;chipset&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;brand&gt;</strong>Samsung<strong class="hl-tag" style="color: #000096">&lt;/brand&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;model&gt;</strong>Exynos 9820<strong class="hl-tag" style="color: #000096">&lt;/model&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;cores&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;core&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;name&gt;</strong>Exynos M4<strong class="hl-tag" style="color: #000096">&lt;/name&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;frequency</strong> <span class="hl-attribute" style="color: #F5844C">unit</span>=<span class="hl-value" style="color: #993300">"GHz"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>2.73<strong class="hl-tag" style="color: #000096">&lt;/frequency&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;quantity&gt;</strong>2<strong class="hl-tag" style="color: #000096">&lt;/quantity&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;/core&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;core&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;name&gt;</strong>Cortex-A75<strong class="hl-tag" style="color: #000096">&lt;/name&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;frequency</strong> <span class="hl-attribute" style="color: #F5844C">unit</span>=<span class="hl-value" style="color: #993300">"GHz"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>2.31<strong class="hl-tag" style="color: #000096">&lt;/frequency&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;quantity&gt;</strong>2<strong class="hl-tag" style="color: #000096">&lt;/quantity&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;/core&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;core&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;name&gt;</strong>Cortex-A55<strong class="hl-tag" style="color: #000096">&lt;/name&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;frequency</strong> <span class="hl-attribute" style="color: #F5844C">unit</span>=<span class="hl-value" style="color: #993300">"GHz"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>1.95<strong class="hl-tag" style="color: #000096">&lt;/frequency&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;quantity&gt;</strong>4<strong class="hl-tag" style="color: #000096">&lt;/quantity&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;/core&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;/cores&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;gpu&gt;</strong>Mali-G76 MP12<strong class="hl-tag" style="color: #000096">&lt;/gpu&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/chipset&gt;</strong>
+
+        <strong class="hl-tag" style="color: #000096">&lt;cameras&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;rear&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;camera&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;resolution&gt;</strong>12<strong class="hl-tag" style="color: #000096">&lt;/resolution&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;focallength&gt;</strong>26<strong class="hl-tag" style="color: #000096">&lt;/focallength&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;aperture&gt;</strong>1.5-2.4<strong class="hl-tag" style="color: #000096">&lt;/aperture&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;category&gt;</strong>Prim&aacute;rn&iacute;<strong class="hl-tag" style="color: #000096">&lt;/category&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;/camera&gt;</strong>
+
+                <strong class="hl-tag" style="color: #000096">&lt;camera&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;resolution&gt;</strong>16<strong class="hl-tag" style="color: #000096">&lt;/resolution&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;focallength&gt;</strong>12<strong class="hl-tag" style="color: #000096">&lt;/focallength&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;aperture&gt;</strong>2.2<strong class="hl-tag" style="color: #000096">&lt;/aperture&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;category&gt;</strong>Ultra&#353;irok&aacute;<strong class="hl-tag" style="color: #000096">&lt;/category&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;/camera&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;/rear&gt;</strong>
+
+            <strong class="hl-tag" style="color: #000096">&lt;front&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;camera&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;resolution&gt;</strong>10<strong class="hl-tag" style="color: #000096">&lt;/resolution&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;focallength&gt;</strong>12<strong class="hl-tag" style="color: #000096">&lt;/focallength&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;aperture&gt;</strong>1.9<strong class="hl-tag" style="color: #000096">&lt;/aperture&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;/camera&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;/front&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/cameras&gt;</strong>
+
+        <strong class="hl-tag" style="color: #000096">&lt;memory&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;ram</strong> <span class="hl-attribute" style="color: #F5844C">unit</span>=<span class="hl-value" style="color: #993300">"GB"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>6<strong class="hl-tag" style="color: #000096">&lt;/ram&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;internal</strong> <span class="hl-attribute" style="color: #F5844C">unit</span>=<span class="hl-value" style="color: #993300">"GB"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>128<strong class="hl-tag" style="color: #000096">&lt;/internal&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;expansionslot&gt;</strong>microSDXC<strong class="hl-tag" style="color: #000096">&lt;/expansionslot&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/memory&gt;</strong>
+
+        <strong class="hl-tag" style="color: #000096">&lt;system&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;name&gt;</strong>Android<strong class="hl-tag" style="color: #000096">&lt;/name&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;version&gt;</strong>9.0<strong class="hl-tag" style="color: #000096">&lt;/version&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;overlay&gt;</strong>One UI 3.0<strong class="hl-tag" style="color: #000096">&lt;/overlay&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/system&gt;</strong>
+
+        <strong class="hl-tag" style="color: #000096">&lt;battery&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;size&gt;</strong>3100<strong class="hl-tag" style="color: #000096">&lt;/size&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;charging&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;wired&gt;</strong>15<strong class="hl-tag" style="color: #000096">&lt;/wired&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;wireless&gt;</strong>15<strong class="hl-tag" style="color: #000096">&lt;/wireless&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;/charging&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/battery&gt;</strong>
+
+        <strong class="hl-tag" style="color: #000096">&lt;connectors&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;connector&gt;</strong>USB-C<strong class="hl-tag" style="color: #000096">&lt;/connector&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;connector&gt;</strong>3.5mm jack<strong class="hl-tag" style="color: #000096">&lt;/connector&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/connectors&gt;</strong>
+
+        <strong class="hl-tag" style="color: #000096">&lt;comms&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;comm&gt;</strong>Wi-Fi 6<strong class="hl-tag" style="color: #000096">&lt;/comm&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;comm&gt;</strong>Bluetooth 5.0<strong class="hl-tag" style="color: #000096">&lt;/comm&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;comm&gt;</strong>GPS<strong class="hl-tag" style="color: #000096">&lt;/comm&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;comm&gt;</strong>NFC<strong class="hl-tag" style="color: #000096">&lt;/comm&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/comms&gt;</strong>
+
+        <strong class="hl-tag" style="color: #000096">&lt;features&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;feature&gt;</strong>&#268;te&#269;ka otisk&#367;<strong class="hl-tag" style="color: #000096">&lt;/feature&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;feature&gt;</strong>Rychl&eacute; nab&iacute;jen&iacute;<strong class="hl-tag" style="color: #000096">&lt;/feature&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;feature&gt;</strong>Bezdr&aacute;tov&eacute; nab&iacute;jen&iacute;<strong class="hl-tag" style="color: #000096">&lt;/feature&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;feature&gt;</strong>Hlasov&yacute; asistent Bixby<strong class="hl-tag" style="color: #000096">&lt;/feature&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;feature&gt;</strong>Samsung Pay<strong class="hl-tag" style="color: #000096">&lt;/feature&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/features&gt;</strong>
+
+        <strong class="hl-tag" style="color: #000096">&lt;body&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;dimensions&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;height&gt;</strong>142.2<strong class="hl-tag" style="color: #000096">&lt;/height&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;width&gt;</strong>69.9<strong class="hl-tag" style="color: #000096">&lt;/width&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;depth&gt;</strong>7.9<strong class="hl-tag" style="color: #000096">&lt;/depth&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;/dimensions&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;weight&gt;</strong>150<strong class="hl-tag" style="color: #000096">&lt;/weight&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/body&gt;</strong>
+
+        <strong class="hl-tag" style="color: #000096">&lt;categories&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;category&gt;</strong>Dotykov&yacute;<strong class="hl-tag" style="color: #000096">&lt;/category&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/categories&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;/device&gt;</strong>
+                </pre><p>
+            </p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="d5e222"></a>Chapter&nbsp;2.&nbsp;Sch&eacute;mata</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="sect1"><a href="#d5e227">XML Schema</a></span></dt><dt><span class="sect1"><a href="#d5e232">Schematron</a></span></dt></dl></div><p>Tato &#269;&aacute;st obsahuje uk&aacute;zky obou sch&eacute;mat (XML Schema, Schematron). Ve XML Schema je
+            pops&aacute;na konstrukce element&#367; v XML dokumentu, jsou zde z&aacute;rove&#328; o&#353;et&#345;eny ID telefon&#367; a
+            v&yacute;robci pomoc&iacute; <code class="code">key</code> a <code class="code">keyref</code>. V Schematronu jsou potom o&#353;et&#345;eny
+            pr&aacute;zdn&eacute; hodnoty a z&aacute;porn&aacute; &#269;&iacute;sla.</p><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e227"></a>XML Schema</h2></div></div></div><p>XML Schema se nach&aacute;z&iacute; v souboru <code class="code">schema.xsd</code>. V uveden&eacute; uk&aacute;zce jsou
+                zaps&aacute;ny kontroly pomoc&iacute; key a keyref na kontrolu unik&aacute;tnosti ID, a kontrola jm&eacute;na
+                v&yacute;robce. </p><pre class="programlisting">
+<strong class="hl-tag" style="color: #000096">&lt;xs:element</strong> <span class="hl-attribute" style="color: #F5844C">name</span>=<span class="hl-value" style="color: #993300">"devices"</span> <span class="hl-attribute" style="color: #F5844C">type</span>=<span class="hl-value" style="color: #993300">"devicesType"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;xs:key</strong> <span class="hl-attribute" style="color: #F5844C">name</span>=<span class="hl-value" style="color: #993300">"deviceIdKey"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;xs:selector</strong> <span class="hl-attribute" style="color: #F5844C">xpath</span>=<span class="hl-value" style="color: #993300">"mk:device"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;xs:field</strong> <span class="hl-attribute" style="color: #F5844C">xpath</span>=<span class="hl-value" style="color: #993300">"@id"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/xs:key&gt;</strong>
+
+        <strong class="hl-tag" style="color: #000096">&lt;xs:keyref</strong> <span class="hl-attribute" style="color: #F5844C">refer</span>=<span class="hl-value" style="color: #993300">"manufacturersKey"</span> <span class="hl-attribute" style="color: #F5844C">name</span>=<span class="hl-value" style="color: #993300">"brandConfirmation"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;xs:selector</strong> <span class="hl-attribute" style="color: #F5844C">xpath</span>=<span class="hl-value" style="color: #993300">"mk:device"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;xs:field</strong> <span class="hl-attribute" style="color: #F5844C">xpath</span>=<span class="hl-value" style="color: #993300">"mk:brand"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/xs:keyref&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;/xs:element&gt;</strong>
+<strong class="hl-tag" style="color: #000096">&lt;/xs:element&gt;</strong>
+
+<strong class="hl-tag" style="color: #000096">&lt;xs:complexType</strong> <span class="hl-attribute" style="color: #F5844C">name</span>=<span class="hl-value" style="color: #993300">"devicesType"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;xs:sequence&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;xs:element</strong> <span class="hl-attribute" style="color: #F5844C">name</span>=<span class="hl-value" style="color: #993300">"manufacturers"</span> <span class="hl-attribute" style="color: #F5844C">type</span>=<span class="hl-value" style="color: #993300">"manufacturersType"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;xs:key</strong> <span class="hl-attribute" style="color: #F5844C">name</span>=<span class="hl-value" style="color: #993300">"manufacturersKey"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;xs:selector</strong> <span class="hl-attribute" style="color: #F5844C">xpath</span>=<span class="hl-value" style="color: #993300">"mk:manufacturer"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;xs:field</strong> <span class="hl-attribute" style="color: #F5844C">xpath</span>=<span class="hl-value" style="color: #993300">"."</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;/xs:key&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;/xs:element&gt;</strong>
+
+            ...
+        <strong class="hl-tag" style="color: #000096">&lt;/xs:sequence&gt;</strong>
+<strong class="hl-tag" style="color: #000096">&lt;/xs:complexType&gt;</strong>
+                
+            </pre></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e232"></a>Schematron</h2></div></div></div><p>Schematron se nach&aacute;z&iacute; v souboru <code class="code">schema.sch</code>. Ve Schematronu jsou
+                kontroly o&#353;et&#345;uj&iacute;c&iacute; pr&aacute;zdn&eacute; stringov&eacute; elementy a kontroly pro nez&aacute;pornost &#269;&iacute;sel. V
+                uk&aacute;zce je uvedena &#269;&aacute;st kontroluj&iacute;c&iacute; ob&#283; v&yacute;&#353;e zm&iacute;n&#283;n&eacute; pro z&aacute;kladn&iacute; informace o
+                telefonu.</p><pre class="programlisting">
+<strong class="hl-tag" style="color: #000096">&lt;sch:pattern&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;sch:title&gt;</strong>Kontrola z&aacute;kladn&iacute;ch &uacute;daj&#367; o telefonu<strong class="hl-tag" style="color: #000096">&lt;/sch:title&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;sch:rule</strong> <span class="hl-attribute" style="color: #F5844C">context</span>=<span class="hl-value" style="color: #993300">"mk:device"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;sch:assert</strong> <span class="hl-attribute" style="color: #F5844C">test</span>=<span class="hl-value" style="color: #993300">"@id &gt; 0"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>ID mus&iacute; b&yacute;t kladn&eacute; &#269;&iacute;slo!<strong class="hl-tag" style="color: #000096">&lt;/sch:assert&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;sch:report</strong> <span class="hl-attribute" style="color: #F5844C">test</span>=<span class="hl-value" style="color: #993300">"empty(mk:model/mk:name)"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>Element name mus&iacute; obsahovat text!<strong class="hl-tag" style="color: #000096">&lt;/sch:report&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;sch:report</strong> <span class="hl-attribute" style="color: #F5844C">test</span>=<span class="hl-value" style="color: #993300">"empty(mk:model/mk:code)"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>Element code mus&iacute; obsahovat text!<strong class="hl-tag" style="color: #000096">&lt;/sch:report&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;sch:report</strong> <span class="hl-attribute" style="color: #F5844C">test</span>=<span class="hl-value" style="color: #993300">"empty(mk:color)"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>Element color mus&iacute; obsahovat text!<strong class="hl-tag" style="color: #000096">&lt;/sch:report&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;sch:assert</strong> <span class="hl-attribute" style="color: #F5844C">test</span>=<span class="hl-value" style="color: #993300">"mk:price &gt; 0"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>Cena mus&iacute; b&yacute;t kladn&eacute; &#269;&iacute;slo!<strong class="hl-tag" style="color: #000096">&lt;/sch:assert&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;/sch:rule&gt;</strong>
+<strong class="hl-tag" style="color: #000096">&lt;/sch:pattern&gt;</strong>               
+            </pre></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="d5e237"></a>Chapter&nbsp;3.&nbsp;Transormace do HTML</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="sect1"><a href="#d5e242">Kask&aacute;dov&eacute; styly</a></span></dt></dl></div><p>Transformace je ulo&#382;ena v souboru <code class="filename">transformace_html.xsl</code>, kter&aacute;
+            slou&#382;&iacute; pro transformaci hlavn&iacute;ho XML dokumentu do webov&eacute; podoby, kter&aacute; je interaktivn&iacute;
+            (p&#345;eklik&aacute;vac&iacute; menu). V uk&aacute;zce je za&#269;&aacute;tek transformace, kter&aacute; vytv&aacute;&#345;&iacute; z&aacute;kladn&iacute; syntaxi
+            HTML a p&#345;ipojuje styly. Takto potom vypad&aacute; st&aacute;nka pro kazd&yacute; jednotliv&yacute; telefon. </p><pre class="programlisting">
+                <strong class="hl-tag" style="color: #000096">&lt;xsl:template</strong> <span class="hl-attribute" style="color: #F5844C">match</span>=<span class="hl-value" style="color: #993300">"device"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;xsl:result-document</strong> <span class="hl-attribute" style="color: #F5844C">href</span>=<span class="hl-value" style="color: #993300">"weby_telefony/{generate-id()}.html"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;html</strong> <span class="hl-attribute" style="color: #F5844C">lang</span>=<span class="hl-value" style="color: #993300">"cs"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;head&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;title&gt;</strong>
+                        <strong class="hl-tag" style="color: #000096">&lt;xsl:value-of</strong> <span class="hl-attribute" style="color: #F5844C">select</span>=<span class="hl-value" style="color: #993300">"brand"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+                        <strong class="hl-tag" style="color: #000096">&lt;xsl:text&gt;</strong> <strong class="hl-tag" style="color: #000096">&lt;/xsl:text&gt;</strong>
+                        <strong class="hl-tag" style="color: #000096">&lt;xsl:value-of</strong> <span class="hl-attribute" style="color: #F5844C">select</span>=<span class="hl-value" style="color: #993300">"model/name"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;/title&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;link</strong> <span class="hl-attribute" style="color: #F5844C">rel</span>=<span class="hl-value" style="color: #993300">"stylesheet"</span> <span class="hl-attribute" style="color: #F5844C">href</span>=<span class="hl-value" style="color: #993300">"../css/style.css"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;link</strong> <span class="hl-attribute" style="color: #F5844C">rel</span>=<span class="hl-value" style="color: #993300">"stylesheet"</span> <span class="hl-attribute" style="color: #F5844C">href</span>=<span class="hl-value" style="color: #993300">"../css/item.css"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;/head&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;body&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;header&gt;</strong>Katalog mobiln&iacute;ch telefon&#367;<strong class="hl-tag" style="color: #000096">&lt;/header&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;a</strong> <span class="hl-attribute" style="color: #F5844C">href</span>=<span class="hl-value" style="color: #993300">"../webova_stranka.html"</span><strong class="hl-tag" style="color: #000096">&gt;</strong> &#8592; <strong class="hl-tag" style="color: #000096">&lt;em&gt;</strong>Zp&#283;t na katalog<strong class="hl-tag" style="color: #000096">&lt;/em&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;/a&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;main&gt;</strong>
+                        <strong class="hl-tag" style="color: #000096">&lt;div</strong> <span class="hl-attribute" style="color: #F5844C">class</span>=<span class="hl-value" style="color: #993300">"mobileTitle"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+                            <strong class="hl-tag" style="color: #000096">&lt;h1&gt;</strong>
+                                <strong class="hl-tag" style="color: #000096">&lt;xsl:value-of</strong> <span class="hl-attribute" style="color: #F5844C">select</span>=<span class="hl-value" style="color: #993300">"brand"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+                                <strong class="hl-tag" style="color: #000096">&lt;xsl:text&gt;</strong> <strong class="hl-tag" style="color: #000096">&lt;/xsl:text&gt;</strong>
+                                <strong class="hl-tag" style="color: #000096">&lt;xsl:value-of</strong> <span class="hl-attribute" style="color: #F5844C">select</span>=<span class="hl-value" style="color: #993300">"model/name"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+                            <strong class="hl-tag" style="color: #000096">&lt;/h1&gt;</strong>
+                            <strong class="hl-tag" style="color: #000096">&lt;div</strong> <span class="hl-attribute" style="color: #F5844C">class</span>=<span class="hl-value" style="color: #993300">"modelCode"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+                                <strong class="hl-tag" style="color: #000096">&lt;xsl:text&gt;</strong>[<strong class="hl-tag" style="color: #000096">&lt;/xsl:text&gt;</strong>
+                                <strong class="hl-tag" style="color: #000096">&lt;xsl:value-of</strong> <span class="hl-attribute" style="color: #F5844C">select</span>=<span class="hl-value" style="color: #993300">"model/code"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+                                <strong class="hl-tag" style="color: #000096">&lt;xsl:text&gt;</strong>]<strong class="hl-tag" style="color: #000096">&lt;/xsl:text&gt;</strong>
+                            <strong class="hl-tag" style="color: #000096">&lt;/div&gt;</strong>
+                        <strong class="hl-tag" style="color: #000096">&lt;/div&gt;</strong>
+                        <strong class="hl-tag" style="color: #000096">&lt;div</strong> <span class="hl-attribute" style="color: #F5844C">class</span>=<span class="hl-value" style="color: #993300">"additionalInfo"</span><strong class="hl-tag" style="color: #000096">&gt;</strong> <strong class="hl-tag" style="color: #000096">&lt;/div&gt;</strong>
+                        <strong class="hl-tag" style="color: #000096">&lt;xsl:apply-templates/&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;/main&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;footer&gt;</strong> Vojt&#283;ch Nerad [nerv01@vse.cz] <strong class="hl-tag" style="color: #000096">&lt;/footer&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;/body&gt;</strong>
+            <strong class="hl-tag" style="color: #000096">&lt;/html&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;/xsl:result-document&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;/xsl:template&gt;</strong>
+        </pre><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e242"></a>Kask&aacute;dov&eacute; styly</h2></div></div></div><p>Nach&aacute;zej&iacute; se v souboru <code class="filename">css/style.css</code> a
+                    <code class="filename">css/item.css</code>. Vu&#382;&iacute;vaj&iacute; se p&#345;i stylov&aacute;n&iacute; HTML str&aacute;nky, aby
+                data byla v&iacute;ce p&#345;ehledn&aacute; p&#345;i prezentaci u&#382;ivateli. V uk&aacute;zce je zobrazen hlavn&iacute;
+                styl.</p><pre class="programlisting">
+<span class="hl-directive" style="color: maroon">@import</span> url(<strong class="hl-string"><em style="color:red">'https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap'</em></strong>);
+
+body {
+    <strong class="hl-keyword">background-color</strong>: lightgray;
+    <strong class="hl-keyword">font-family</strong>: <strong class="hl-string"><em style="color:red">'Roboto'</em></strong>, sans-serif;
+}
+
+header {
+    <strong class="hl-keyword">font-size</strong>: <span class="hl-number">40</span>px;
+    <strong class="hl-keyword">font-weight</strong>: bold;
+    <strong class="hl-keyword">padding</strong>: <span class="hl-number">2</span>px;
+}
+
+.item {
+    <strong class="hl-keyword">padding</strong>: <span class="hl-number">5</span>px;
+    <strong class="hl-keyword">padding-left</strong>: <span class="hl-number">20</span>px;
+    <strong class="hl-keyword">font-size</strong>: <span class="hl-number">30</span>px;    
+}
+
+footer {
+    <strong class="hl-keyword">text-align</strong>: center;
+}
+
+a {
+    <strong class="hl-keyword">color</strong>: black;
+    <strong class="hl-keyword">text-decoration</strong>: none;
+}
+
+a:hover {
+    <strong class="hl-keyword">color</strong>: grey;
+}
+            </pre></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="d5e248"></a>Chapter&nbsp;4.&nbsp;Transformace do PDF</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="sect1"><a href="#d5e253">Uk&aacute;zka transformace do PDF</a></span></dt></dl></div><p>Transformace se nach&aacute;z&iacute; v souboru <code class="filename">transformace_pdf.xsl</code>. Po
+            spu&#353;en&iacute; transformace na XML dokument vznikne pomocn&yacute; soubor
+                <code class="filename">transformace_pdf.fo</code> ze kter&eacute;ho n&aacute;sledn&#283; vznikne v&yacute;sledn&yacute; PDF
+            dokument. PDF dokument obsahuje tituln&iacute; stranu, kilac&iacute; obsah a v&yacute;pis pro jednotliv&eacute;
+            telefony. V uk&aacute;zce je k&oacute;d vytv&aacute;&#345;ej&iacute;c&iacute; ID, umo&#382;&#328;uj&iacute;c&iacute; tvorbu interaktivn&iacute;ho
+            obsahu.</p><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e253"></a>Uk&aacute;zka transformace do PDF</h2></div></div></div><pre class="programlisting">
+<strong class="hl-tag" style="color: #000096">&lt;xsl:template</strong> <span class="hl-attribute" style="color: #F5844C">match</span>=<span class="hl-value" style="color: #993300">"/"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+		...
+                    <strong class="hl-tag" style="color: #000096">&lt;fo:block&gt;</strong>
+                        <strong class="hl-tag" style="color: #000096">&lt;xsl:for-each</strong> <span class="hl-attribute" style="color: #F5844C">select</span>=<span class="hl-value" style="color: #993300">"devices/device"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>                                
+                            <strong class="hl-tag" style="color: #000096">&lt;fo:block</strong> <span class="hl-attribute" style="color: #F5844C">text-align</span>=<span class="hl-value" style="color: #993300">"justify"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+                                <strong class="hl-tag" style="color: #000096">&lt;fo:basic-link</strong> <span class="hl-attribute" style="color: #F5844C">internal-destination</span>=<span class="hl-value" style="color: #993300">"{generate-id(.)}"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+                                    <strong class="hl-tag" style="color: #000096">&lt;xsl:value-of</strong> <span class="hl-attribute" style="color: #F5844C">select</span>=<span class="hl-value" style="color: #993300">"brand"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+                                    <strong class="hl-tag" style="color: #000096">&lt;xsl:text&gt;</strong> <strong class="hl-tag" style="color: #000096">&lt;/xsl:text&gt;</strong>
+                                    <strong class="hl-tag" style="color: #000096">&lt;xsl:value-of</strong> <span class="hl-attribute" style="color: #F5844C">select</span>=<span class="hl-value" style="color: #993300">"model/name"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+                                <strong class="hl-tag" style="color: #000096">&lt;/fo:basic-link&gt;</strong>
+                             <strong class="hl-tag" style="color: #000096">&lt;fo:leader</strong> <span class="hl-attribute" style="color: #F5844C">leader-pattern</span>=<span class="hl-value" style="color: #993300">"dots"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+
+                                <strong class="hl-tag" style="color: #000096">&lt;fo:page-number-citation</strong> <span class="hl-attribute" style="color: #F5844C">ref-id</span>=<span class="hl-value" style="color: #993300">"{generate-id(.)}"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+                            <strong class="hl-tag" style="color: #000096">&lt;/fo:block&gt;</strong>
+                        <strong class="hl-tag" style="color: #000096">&lt;/xsl:for-each&gt;</strong>
+                    <strong class="hl-tag" style="color: #000096">&lt;/fo:block&gt;</strong>
+                <strong class="hl-tag" style="color: #000096">&lt;/fo:block&gt;</strong>
+		...
+<strong class="hl-tag" style="color: #000096">&lt;/xsl:template&gt;</strong>
+
+<strong class="hl-tag" style="color: #000096">&lt;xsl:template</strong> <span class="hl-attribute" style="color: #F5844C">match</span>=<span class="hl-value" style="color: #993300">"device"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;fo:block</strong> <span class="hl-attribute" style="color: #F5844C">id</span>=<span class="hl-value" style="color: #993300">"{generate-id(.)}"</span> <span class="hl-attribute" style="color: #F5844C">break-before</span>=<span class="hl-value" style="color: #993300">"page"</span> <span class="hl-attribute" style="color: #F5844C">font-weight</span>=<span class="hl-value" style="color: #993300">"bold"</span> <span class="hl-attribute" style="color: #F5844C">font-size</span>=<span class="hl-value" style="color: #993300">"200%"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;xsl:value-of</strong> <span class="hl-attribute" style="color: #F5844C">select</span>=<span class="hl-value" style="color: #993300">"brand"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;xsl:text&gt;</strong> <strong class="hl-tag" style="color: #000096">&lt;/xsl:text&gt;</strong>
+        <strong class="hl-tag" style="color: #000096">&lt;xsl:value-of</strong> <span class="hl-attribute" style="color: #F5844C">select</span>=<span class="hl-value" style="color: #993300">"model/name"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+    <strong class="hl-tag" style="color: #000096">&lt;/fo:block&gt;</strong>
+
+    <strong class="hl-tag" style="color: #000096">&lt;xsl:apply-templates/&gt;</strong>
+<strong class="hl-tag" style="color: #000096">&lt;/xsl:template&gt;</strong>
+            </pre></div></div></div></body></html>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" language="cs"><fo:layout-master-set><fo:simple-page-master margin-bottom="2cm" margin-left="2cm" margin-right="2cm" margin-top="2cm" master-name="title-page" page-height="29.7cm" page-width="21cm" margin="1cm"><fo:region-body margin="1cm"/><fo:region-before extent="0.4cm"/><fo:region-after extent="0.4cm"/></fo:simple-page-master><fo:simple-page-master margin-bottom="1cm" margin-left="2cm" margin-right="2cm" margin-top="2cm" master-name="main" page-height="29.7cm" page-width="21cm" margin="1cm"><fo:region-body margin="1cm"/><fo:region-before extent="0.4cm"/><fo:region-after extent="0.4cm"/></fo:simple-page-master></fo:layout-master-set><fo:page-sequence master-reference="title-page"><fo:flow flow-name="xsl-region-body" font-family="Arial"><fo:block font-size="30px" space-before="5cm" font-weight="bold" text-align="center"> Semestrální práce z předmětu 4IZ238 </fo:block><fo:block font-size="30px" font-weight="bold" space-before="1cm" text-align="center"> Mobilní katalog </fo:block><fo:block font-size="30px" font-weight="bold" space-before="1cm" text-align="center"> Vojtěch Nerad </fo:block></fo:flow></fo:page-sequence><fo:page-sequence master-reference="main" font-family="Arial"><fo:static-content flow-name="xsl-region-before" font-family="Arial"><fo:block text-align="right">Mobilní katalog [nerv01]</fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after"><fo:block text-align="center"><fo:page-number/></fo:block></fo:static-content><fo:flow flow-name="xsl-region-body"><fo:block-container width="15cm"><fo:block font-weight="bold">Obsah</fo:block><fo:block><fo:block text-align-last="justify"><fo:basic-link internal-destination="d1e16">Samsung Galaxy S10e<fo:leader leader-pattern="dots"/><fo:page-number-citation ref-id="d1e16"/></fo:basic-link></fo:block><fo:block text-align-last="justify"><fo:basic-link internal-destination="d1e221">Apple iPhone 11<fo:leader leader-pattern="dots"/><fo:page-number-citation ref-id="d1e221"/></fo:basic-link></fo:block><fo:block text-align-last="justify"><fo:basic-link internal-destination="d1e410">Nokia 6310 (2021)<fo:leader leader-pattern="dots"/><fo:page-number-citation ref-id="d1e410"/></fo:basic-link></fo:block><fo:block text-align-last="justify"><fo:basic-link internal-destination="d1e564">Cat S42 H+<fo:leader leader-pattern="dots"/><fo:page-number-citation ref-id="d1e564"/></fo:basic-link></fo:block><fo:block text-align-last="justify"><fo:basic-link internal-destination="d1e727">Apple iPhone 13 Pro Max<fo:leader leader-pattern="dots"/><fo:page-number-citation ref-id="d1e727"/></fo:basic-link></fo:block></fo:block></fo:block-container><fo:block-container><fo:block id="d1e16" break-before="page" font-weight="bold" font-size="200%">Samsung Galaxy S10e</fo:block><fo:block><fo:float float="right"><fo:block><fo:external-graphic src="url('img/SM-G970F.png')" content-height="5cm"/></fo:block></fo:float></fo:block>
+        
+        
+            
+            <fo:block font-style="italic">SM-G970F</fo:block>
+        
+        <fo:block>8. 3. 2019</fo:block>
+        <fo:block>Prism Black</fo:block>
+        <fo:block>9999 CZK</fo:block>
+        
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px"> Display </fo:block><fo:block>AMOLED, 5.8", 1080 × 2280 px (19:9)</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px"> Chipset </fo:block><fo:block>Samsung Exynos 9820, 2 × Exynos M4 @ 2.73 GHz, 2 × Cortex-A75 @ 2.31 GHz, 4 × Cortex-A55 @ 1.95 GHz, Mali-G76 MP12</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Kamery</fo:block><fo:block>
+            <fo:block font-weight="bold"> Zadní </fo:block><fo:block>
+                <fo:block>12 Mpx, 26 mm, f/1.5-2.4, Primární</fo:block>
+
+                <fo:block>16 Mpx, 12 mm, f/2.2, Ultraširoká</fo:block>
+            </fo:block>
+
+            <fo:block font-weight="bold"> Přední </fo:block><fo:block>
+                <fo:block>10 Mpx, 12 mm, f/1.9</fo:block>
+            </fo:block>
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Paměti</fo:block><fo:block>
+            6 GB RAM, 
+            128 GB interní
+            + microSDXC
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Systém</fo:block><fo:block>Android 9.0, One UI 3.0</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Baterie</fo:block><fo:block>3100 mAh, drátové nabíjení 15 W, bezdrátové nabíjení 15 W</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Konektory</fo:block><fo:block>
+            USB-C, 
+            3.5mm jack
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Komunikační
+            technologie</fo:block><fo:block>
+            4G LTE, 
+            Wi-Fi 6, 
+            Bluetooth 5.0, 
+            GPS, 
+            NFC
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Funkce</fo:block><fo:block>
+            Čtečka otisků, 
+            Rychlé nabíjení, 
+            Bezdrátové nabíjení, 
+            Hlasový asistent Bixby, 
+            Samsung Pay
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Konstrukce</fo:block><fo:block>142.2 mm × 69.9 mm × 7.9 mm, 150 g</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Kategorie</fo:block><fo:block>
+            Dotykový
+        </fo:block>
+    <fo:block id="d1e221" break-before="page" font-weight="bold" font-size="200%">Apple iPhone 11</fo:block><fo:block><fo:float float="right"><fo:block><fo:external-graphic src="url('img/A2221.png')" content-height="5cm"/></fo:block></fo:float></fo:block>
+        
+        
+            
+            <fo:block font-style="italic">A2221</fo:block>
+        
+        <fo:block>10. 9. 2019</fo:block>
+        <fo:block>Red</fo:block>
+        <fo:block>600 EUR</fo:block>
+                   
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px"> Display </fo:block><fo:block>Liquid Retina IPS LCD, 6.1", 828 × 1792 px (19.5:9)</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px"> Chipset </fo:block><fo:block>Apple A13 Bionic, 4 × Apple Thunder @ 1.8 GHz, 2 × Apple Lightning @ 2.65 GHz, Apple A13 Bionic GPU</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Kamery</fo:block><fo:block>
+            <fo:block font-weight="bold"> Zadní </fo:block><fo:block>
+                <fo:block>12 Mpx, 26 mm, f/1.8, Primární</fo:block>
+
+                <fo:block>12 Mpx, 13 mm, f/2.4, Ultraširoká</fo:block>
+            </fo:block>
+
+            <fo:block font-weight="bold"> Přední </fo:block><fo:block>
+                <fo:block>12 Mpx, 23 mm, f/2.2</fo:block>
+            </fo:block>
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Paměti</fo:block><fo:block>
+            4 GB RAM, 
+            64 GB interní
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Systém</fo:block><fo:block>iOS 13</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Baterie</fo:block><fo:block>3110 mAh, drátové nabíjení 18 W, bezdrátové nabíjení 7.5 W</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Konektory</fo:block><fo:block>
+            Lightning
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Komunikační
+            technologie</fo:block><fo:block>
+            4G LTE, 
+            Wi-Fi 6, 
+            Bluetooth 5.0, 
+            GPS, 
+            NFC
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Funkce</fo:block><fo:block>
+            Face ID, 
+            Rychlé nabíjení, 
+            Bezdrátové nabíjení, 
+            Hlasový asistent Siri, 
+            Apple Pay
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Konstrukce</fo:block><fo:block>150.9 mm × 75.7 mm × 8.3 mm, 194 g</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Kategorie</fo:block><fo:block>
+            Dotykový
+        </fo:block>
+    <fo:block id="d1e410" break-before="page" font-weight="bold" font-size="200%">Nokia 6310 (2021)</fo:block><fo:block><fo:float float="right"><fo:block><fo:external-graphic src="url('img/TA-1400.png')" content-height="5cm"/></fo:block></fo:float></fo:block>
+        
+        
+            
+            <fo:block font-style="italic">TA-1400</fo:block>
+        
+        <fo:block>27. 8. 2021</fo:block>
+        <fo:block>Green</fo:block>
+        <fo:block>2000 CZK</fo:block>
+        
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px"> Display </fo:block><fo:block>TFT, 2.8", 240 × 320 px (4:3)</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px"> Chipset </fo:block><fo:block>Unisoc 6531F, 1 × ARM926EJ-S @ 208 MHz, SC6531 GPU</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Kamery</fo:block><fo:block>
+            <fo:block font-weight="bold"> Zadní </fo:block><fo:block>
+                <fo:block>0.3 Mpx, Primární</fo:block>
+            </fo:block>
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Paměti</fo:block><fo:block>
+            8 MB RAM, 
+            16 MB interní
+            + microSDHC
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Systém</fo:block><fo:block>Series 30+</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Baterie</fo:block><fo:block>1150 mAh, drátové nabíjení 18 W</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Konektory</fo:block><fo:block>
+            microUSB, 
+            3.5mm jack
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Komunikační
+            technologie</fo:block><fo:block>
+            2G GSM, 
+            Wi-Fi 6, 
+            Bluetooth 5.0, 
+            GPS, 
+            NFC
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Funkce</fo:block><fo:block>
+            Face ID, 
+            Rychlé nabíjení, 
+            Bezdrátové nabíjení, 
+            Hlasový asistent Siri, 
+            Apple Pay
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Konstrukce</fo:block><fo:block>142.2 mm × 69.9 mm × 7.9 mm, 150 g</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Kategorie</fo:block><fo:block>
+            Tlačítkový
+        </fo:block>
+    <fo:block id="d1e564" break-before="page" font-weight="bold" font-size="200%">Cat S42 H+</fo:block><fo:block><fo:float float="right"><fo:block><fo:external-graphic src="url('img/S42Hplus.png')" content-height="5cm"/></fo:block></fo:float></fo:block>
+        
+        
+            
+            <fo:block font-style="italic">S42 H+</fo:block>
+        
+        <fo:block>20. 4. 2021</fo:block>
+        <fo:block>Black</fo:block>
+        <fo:block>6000 CZK</fo:block>
+        
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px"> Display </fo:block><fo:block>IPS LCD, 5.5", 720 × 1440 px (18:9)</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px"> Chipset </fo:block><fo:block>Mediatek MT6761D Helio A20, 4 × Cortex-A53 @ 1.8 GHz, PowerVR GE8320</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Kamery</fo:block><fo:block>
+            <fo:block font-weight="bold"> Zadní </fo:block><fo:block>
+                <fo:block>13 Mpx, f/2.0, Primární</fo:block>
+            </fo:block>
+            <fo:block font-weight="bold"> Přední </fo:block><fo:block>
+                <fo:block>5 Mpx</fo:block>
+            </fo:block>
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Paměti</fo:block><fo:block>
+            3 GB RAM, 
+            32 GB interní
+            + microSDXC
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Systém</fo:block><fo:block>Android 10</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Baterie</fo:block><fo:block>4200 mAh, drátové nabíjení 10 W</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Konektory</fo:block><fo:block>
+            microUSB, 
+            3.5mm jack
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Komunikační
+            technologie</fo:block><fo:block>
+            4G LTE, 
+            Wi-Fi 802.11 b/g/n, 
+            Bluetooth 5.0, 
+            GPS, 
+            NFC
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Funkce</fo:block><fo:block>
+            Vojenská certifikace MIL-SPEC-810H, 
+            Google Pay
+        </fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Konstrukce</fo:block><fo:block>161.3 mm × 77.2 mm × 12.7 mm, 220 g</fo:block>
+
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Kategorie</fo:block><fo:block>
+            Dotykový, 
+            Chytrý, 
+            Odolný
+        </fo:block>
+    <fo:block id="d1e727" break-before="page" font-weight="bold" font-size="200%">Apple iPhone 13 Pro Max</fo:block><fo:block><fo:float float="right"><fo:block><fo:external-graphic src="url('img/A2643.png')" content-height="5cm"/></fo:block></fo:float></fo:block>
+        
+        
+            
+            <fo:block font-style="italic">A2643</fo:block>
+        
+        <fo:block>14. 10. 2021</fo:block>
+        <fo:block>Sierra Blue</fo:block>
+        <fo:block>1400 USD</fo:block>
+                
+        
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px"> Display </fo:block><fo:block>Super Retina XDR OLED, 6.7", 1284 × 2778 px (19.5:9)</fo:block>
+        
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px"> Chipset </fo:block><fo:block>Apple A15 Bionic, 2 × Avalanche @ 3223 MHz, 4 × Blizzard @ 1820 MHz, Apple GPU</fo:block>
+        
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Kamery</fo:block><fo:block>
+            <fo:block font-weight="bold"> Zadní </fo:block><fo:block>
+                <fo:block>12 Mpx, 26 mm, f/1.5, Primární</fo:block>
+                
+                <fo:block>12 Mpx, 77 mm, f/2.8, Telephoto</fo:block>
+                
+                <fo:block>12 Mpx, 13 mm, f/1.8, Širokoúhlá</fo:block>
+            </fo:block>
+            <fo:block font-weight="bold"> Přední </fo:block><fo:block>
+                <fo:block>12 Mpx, 23 mm, f/2.2</fo:block>
+            </fo:block>
+        </fo:block>
+        
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Paměti</fo:block><fo:block>
+            6 GB RAM, 
+            512 GB interní            
+        </fo:block>
+        
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Systém</fo:block><fo:block>iOS 15</fo:block>
+        
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Baterie</fo:block><fo:block>4352 mAh, drátové nabíjení 27 W, bezdrátové nabíjení 15 W</fo:block>
+        
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Konektory</fo:block><fo:block>
+            Lightning            
+        </fo:block>
+        
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Komunikační
+            technologie</fo:block><fo:block>
+            5G, 
+            4G LTE, 
+            Wi-Fi 802.11 b/g/n/ac/6, 
+            Bluetooth 5.0, 
+            GPS, 
+            NFC
+        </fo:block>
+        
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Funkce</fo:block><fo:block>
+            Face ID, 
+            Rychlé nabíjení, 
+            Bezdrátové nabíjení, 
+            MagSage, 
+            Hlasový asistent Siri, 
+            Apple Pay
+        </fo:block>
+        
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Konstrukce</fo:block><fo:block>160.8 mm × 78.1 mm × 7.7 mm, 240 g</fo:block>
+        
+        <fo:block font-weight="bold" font-size="120%" margin-top="5px">Kategorie</fo:block><fo:block>
+            Dotykový, 
+            Chytrý            
+        </fo:block>
+    </fo:block-container></fo:flow></fo:page-sequence></fo:root>

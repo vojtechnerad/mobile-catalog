@@ -1,0 +1,13 @@
+.mobileTitle {
+    display: flex;
+    align-items: center;
+}
+
+.modelCode {
+    margin-left: 10px;
+    font-style: italic;
+}
+
+img {
+    height: 200px;
+}

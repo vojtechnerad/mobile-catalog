@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://example.com/nerv01/mobilni-katalog"
+    xmlns="http://example.com/nerv01/mobilni-katalog"
+    xmlns:mk="http://example.com/nerv01/mobilni-katalog" elementFormDefault="qualified">
+
+    <xs:element name="devices" type="devicesType">
+        <xs:key name="deviceIdKey">
+            <xs:selector xpath="mk:device"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <xs:keyref refer="manufacturersKey" name="brandConfirmation">
+            <xs:selector xpath="mk:device"/>
+            <xs:field xpath="mk:brand"/>
+        </xs:keyref>
+    </xs:element>
+
+    <xs:complexType name="devicesType">
+        <xs:sequence>
+            <xs:element name="manufacturers" type="manufacturersType">
+                <xs:key name="manufacturersKey">
+                    <xs:selector xpath="mk:manufacturer"/>
+                    <xs:field xpath="."/>
+                </xs:key>
+            </xs:element>
+
+            <xs:element name="device" type="deviceType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="manufacturersType">
+        <xs:sequence>
+            <xs:element name="manufacturer" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="deviceType">
+        <xs:sequence>
+            <xs:element name="brand" type="xs:string"/>
+            <xs:element name="model" type="modelType"/>
+            <xs:element name="releasedate" type="xs:date"/>
+            <xs:element name="color" type="xs:string"/>
+            <xs:element name="price" type="priceType"/>
+            <xs:element name="image" type="imageType"/>
+            <xs:element name="display" type="displayType"/>
+            <xs:element name="chipset" type="chipsetType"/>
+            <xs:element name="cameras" type="camerasType"/>
+            <xs:element name="memory" type="memoryType"/>
+            <xs:element name="system" type="systemType"/>
+            <xs:element name="battery" type="batteryType"/>
+            <xs:element name="connectors" type="connectorsType"/>
+            <xs:element name="comms" type="commsType"/>
+            <xs:element name="features" type="featuresType"/>
+            <xs:element name="body" type="bodyType"/>
+            <xs:element name="categories" type="categoriesType"/>
+        </xs:sequence>
+        <xs:attribute type="xs:integer" name="id" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="modelType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="code" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="priceType">
+        <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+                <xs:attribute name="currency" type="currencyType" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="currencyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CZK"/>
+            <xs:enumeration value="EUR"/>
+            <xs:enumeration value="USD"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="imageType">
+        <xs:attribute name="src" type="srcType" use="required"/>
+    </xs:complexType>
+    
+    <xs:simpleType name="srcType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9/_-]{1,})\.(jpg|png)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="displayType">
+        <xs:sequence>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="size" type="xs:decimal"/>
+            <xs:element name="resolution" type="resolutionType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="resolutionType">
+        <xs:sequence>
+            <xs:element name="width" type="xs:decimal"/>
+            <xs:element name="height" type="xs:decimal"/>
+            <xs:element name="aspect_ratio" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="chipsetType">
+        <xs:sequence>
+            <xs:element name="brand" type="xs:string"/>
+            <xs:element name="model" type="xs:string"/>
+            <xs:element name="cores" type="coresType"/>
+            <xs:element name="gpu" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="coresType">
+        <xs:sequence>
+            <xs:element name="core" type="coreType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="coreType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="frequency" type="frequencyType"/>
+            <xs:element name="quantity" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="frequencyType">
+        <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+                <xs:attribute name="unit" type="frequencyUnitType" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="frequencyUnitType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GHz"/>
+            <xs:enumeration value="MHz"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="camerasType">
+        <xs:sequence>
+            <xs:element name="rear" type="cameraPositionType" minOccurs="0"/>
+            <xs:element name="front" type="cameraPositionType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cameraPositionType">
+        <xs:sequence>
+            <xs:element name="camera" type="cameraType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cameraType">
+        <xs:sequence>
+            <xs:element name="resolution" type="xs:decimal"/>
+            <xs:element name="focallength" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="aperture" type="xs:string" minOccurs="0"/>
+            <xs:element name="category" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="memoryType">
+        <xs:sequence>
+            <xs:element name="ram" type="ramType"/>
+            <xs:element name="internal" type="internalType"/>
+            <xs:element name="expansionslot" type="expansionslotType" minOccurs="0"> </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ramType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="unit" type="memoryUnitType" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="internalType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="unit" type="memoryUnitType" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="memoryUnitType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TB"/>
+            <xs:enumeration value="GB"/>
+            <xs:enumeration value="MB"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="expansionslotType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="microSDHC"/>
+            <xs:enumeration value="microSDXC"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="systemType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="version" type="xs:string"/>
+            <xs:element name="overlay" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="batteryType">
+        <xs:sequence>
+            <xs:element name="size" type="xs:decimal"/>
+            <xs:element name="charging" type="chargingType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="chargingType">
+        <xs:sequence>
+            <xs:element name="wired" type="xs:decimal"/>
+            <xs:element name="wireless" type="xs:decimal" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="connectorsType">
+        <xs:sequence>
+            <xs:element name="connector" type="connectorType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="connectorType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="USB-C"/>
+            <xs:enumeration value="microUSB"/>
+            <xs:enumeration value="Lightning"/>
+            <xs:enumeration value="3.5mm jack"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="commsType">
+        <xs:sequence>
+            <xs:sequence>
+                <xs:element name="comm" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="featuresType">
+        <xs:sequence>
+            <xs:sequence>
+                <xs:element name="feature" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="bodyType">
+        <xs:sequence>
+            <xs:element name="dimensions" type="dimensionsType"/>
+            <xs:element name="weight" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="dimensionsType">
+        <xs:sequence>
+            <xs:element name="height" type="xs:decimal"/>
+            <xs:element name="width" type="xs:decimal"/>
+            <xs:element name="depth" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="categoriesType">
+        <xs:sequence>
+            <xs:element name="category" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

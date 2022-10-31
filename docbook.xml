@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">    
+    <info>
+        <title>Semestrální práce z předmětu 4IZ238</title>
+
+        <author>
+            <personname>
+                <firstname>Vojtěch</firstname>
+                <surname>Nerad</surname>
+            </personname>
+
+            <email>nerv01@vse.cz</email>
+        </author>
+    </info>
+
+    <preface>
+        <title>Úvod</title>
+
+        <para>Text, který právě čtete, je dokumentace sloužící k detailnimu popisu mé semestrální
+            práce z předmětu 4IZ238. Tématem práce je katalog mobilní telefonů, který v sobě
+            uchovává detailní informace o specifikacích telefonů. Práce se skládá z několika částí.
+            XML dolkumentu obsahující informace. XSD schématu, kontrolující správnost zápisů do
+            dokumentu. XSLT transformaci dat z XML do HTML stránky. XSL-FO transformaci dat z XML do
+            PDF fokumentu. A tohoto DocBooku.</para>
+    </preface>
+
+    <chapter>
+        <title>XML dokument</title>
+
+        <para>Tato kapitola obsahuje informace o detailní struktuře XML dokumentu.</para>
+        <sect1>
+            <title>Popis elementů</title>
+            <para><table frame="all">
+                    <title>Popis elementů</title>
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1"/>
+                        <colspec colname="c2" colnum="2"/>
+                        <colspec colname="newCol3" colnum="3"/>
+                        <thead>
+                            <row>
+                                <entry>Název elementu</entry>
+                                <entry>Příklad hodnoty</entry>
+                                <entry>Popis elementu</entry>
+                            </row>                            
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>devices</entry>
+                                <entry>/kořenový element/</entry>
+                                <entry>Kořenový element pro celý dokument</entry>
+                            </row>
+                            <row>
+                                <entry>manufacturers/manufacturer</entry>
+                                <entry>OnePlus</entry>
+                                <entry>Možná značky telefonů, pro kontrolu skrze keyref</entry>
+                            </row>                            
+                            <row>
+                                <entry>device</entry>
+                                <entry>/kořenový element/</entry>
+                                <entry>Kořenový element pro dané zařízení</entry>
+                            </row>
+                            <row>
+                                <entry>brand</entry>
+                                <entry>Samsung</entry>
+                                <entry>Značka zařízení</entry>
+                            </row>                            
+                            <row>
+                                <entry>model/name</entry>
+                                <entry>S10e</entry>
+                                <entry>Název modelu zařízení</entry>
+                            </row>
+                            <row>
+                                <entry>model/code</entry>
+                                <entry>SM-G790F</entry>
+                                <entry>Unikátní kód zařízení od výrobce</entry>
+                            </row>
+                            <row>
+                                <entry>releasedate</entry>
+                                <entry>2019-03-08</entry>
+                                <entry>Datum vydání zařízení</entry>
+                            </row>
+                            <row>
+                                <entry>color</entry>
+                                <entry>Prism Black</entry>
+                                <entry>Barva zařízení</entry>
+                            </row>
+                            <row>
+                                <entry>price</entry>
+                                <entry>9999</entry>
+                                <entry>Cena zařízení</entry>
+                            </row>
+                            <row>
+                                <entry>price/@currency</entry>
+                                <entry>CZK</entry>
+                                <entry>Měna ve které je cena uvedena</entry>
+                            </row>
+                            <row>
+                                <entry>display</entry>
+                                <entry>/kořenový element/</entry>
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>display/type</entry>
+                                <entry>AMOLED</entry>
+                                <entry>Typ panelu displaye</entry>
+                            </row>
+                            <row>
+                                <entry>display/size</entry>
+                                <entry>5.8</entry>
+                                <entry>Úhopříčka displaye</entry>
+                            </row>
+                            <row>
+                                <entry>resolution/width</entry>
+                                <entry>1080</entry>
+                                <entry>Šířka rozlišení v px.</entry>
+                            </row>
+                            <row>
+                                <entry>resolution/height</entry>
+                                <entry>2280</entry>
+                                <entry>Výška rozlišení v px.</entry>
+                            </row>
+                            <row>
+                                <entry>resolution/aspect_ratio</entry>
+                                <entry>19:9</entry>
+                                <entry>Poměr stran displaye</entry>
+                            </row>
+                            <row>
+                                <entry>chipset</entry>
+                                <entry>/kořenový element/</entry>
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>brand</entry>
+                                <entry>Samsung</entry>
+                                <entry>Výrobce chipsetu</entry>
+                            </row>
+                            <row>
+                                <entry>model</entry>
+                                <entry>Exynos 9820</entry>
+                                <entry>Model chipsetu</entry>
+                            </row>
+                            <row>
+                                <entry>cores</entry>
+                                <entry>/kořenový element/</entry>
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>core/name</entry>
+                                <entry>Exynos M4</entry>
+                                <entry>Název jádra procesoru</entry>
+                            </row>
+                            <row>
+                                <entry>core/frequency</entry>
+                                <entry>2.73</entry>
+                                <entry>Frekvence jádra procesoru</entry>
+                            </row>
+                            <row>
+                                <entry>core/quantity</entry>
+                                <entry>2</entry>
+                                <entry>Počet daných jader které chipset obsahuje.s</entry>
+                            </row>
+                            <row>
+                                <entry>gpu</entry>
+                                <entry>Mali-G76 MP12</entry>
+                                <entry>Název grafického procesoru.</entry>
+                            </row>                            
+                            <row>
+                                <entry>cameras/rear</entry>
+                                <entry>/kořenový element/</entry>
+                                <entry>Hromadný element obsahující zadní kamery.</entry>
+                            </row>
+                            <row>
+                                <entry>cameras/front</entry>
+                                <entry>/kořenový element/</entry>
+                                <entry>Hromadný element obsahující přední kamery.</entry>
+                            </row>
+                            <row>
+                                <entry>camera/resolution</entry>
+                                <entry>12</entry>
+                                <entry>Rozlišení fotoaparátu v Mpx.</entry>
+                            </row>
+                            <row>
+                                <entry>camera/focallength</entry>
+                                <entry>26</entry>
+                                <entry>Ohnisková vzdálenost fotoaparátu v mm.</entry>
+                            </row>
+                            <row>
+                                <entry>camera/aperture</entry>
+                                <entry>1.5-2.4</entry>
+                                <entry>Clona fotoaparátu</entry>
+                            </row>
+                            <row>
+                                <entry>camera/category</entry>
+                                <entry>Primární</entry>
+                                <entry>Kategorie fotoaparátu</entry>
+                            </row>                            
+                            <row>
+                                <entry>memory/ram</entry>
+                                <entry>6</entry>
+                                <entry>Velikost operační paměti.</entry>
+                            </row>
+                            <row>
+                                <entry>memory/internal</entry>
+                                <entry>128</entry>
+                                <entry>Interní paměť telefonu</entry>
+                            </row>
+                            <row>
+                                <entry>memory/expansionslot</entry>
+                                <entry>microSDXC</entry>
+                                <entry>Typ slotu pro karty rozšiřující paměť.</entry>
+                            </row>
+                            <row>
+                                <entry>system/name</entry>
+                                <entry>Android</entry>
+                                <entry>Název systému telefonu.</entry>
+                            </row>
+                            <row>
+                                <entry>system/version</entry>
+                                <entry>9.0</entry>
+                                <entry>Verze systému telefonu.</entry>
+                            </row>
+                            <row>
+                                <entry>system/overlay</entry>
+                                <entry>One UI 3.0</entry>
+                                <entry>Nadstavba systému telefonu.</entry>
+                            </row>
+                            <row>
+                                <entry>battery/size</entry>
+                                <entry>3100</entry>
+                                <entry>Velikost baterie telefonu vyjádřena v mAh.</entry>
+                            </row>
+                            <row>
+                                <entry>charging/wired</entry>
+                                <entry>15</entry>
+                                <entry>Rychlost drátového nabíjení telefonu.</entry>
+                            </row>
+                            <row>
+                                <entry>charging/wireless</entry>
+                                <entry>15</entry>
+                                <entry>Rychlost bezdrátového nabíjení telefonu.</entry>
+                            </row>
+                            <row>
+                                <entry>connectors/connector</entry>
+                                <entry>USB-C</entry>
+                                <entry>Konektory telefonu.</entry>
+                            </row>
+                            <row>
+                                <entry>comms/comm</entry>
+                                <entry>Wi-Fi 6</entry>
+                                <entry>Seznam komunikačních technologií telefonu.</entry>
+                            </row>
+                            <row>
+                                <entry>features/feature</entry>
+                                <entry>Čtečka otisků</entry>
+                                <entry>Seznam funkcí telefonu.</entry>
+                            </row>
+                            <row>
+                                <entry>dimensions/height</entry>
+                                <entry>142.2</entry>
+                                <entry>Výška telefonu.</entry>
+                            </row>
+                            <row>
+                                <entry>dimensions/width</entry>
+                                <entry>69.9</entry>
+                                <entry>Šířka telefonu</entry>
+                            </row>
+                            <row>
+                                <entry>dimensions/depth</entry>
+                                <entry>7.9</entry>
+                                <entry>Tloušťka telefonu.</entry>
+                            </row>
+                            <row>
+                                <entry>weight</entry>
+                                <entry>150</entry>
+                                <entry>Váha telefonu.</entry>
+                            </row>
+                            <row>
+                                <entry>categories/category</entry>
+                                <entry>Dotykový</entry>
+                                <entry>Kategorie, do kterých je telefon zařazen.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </para>
+        </sect1>
+
+
+        <sect1>
+            <title>Ukázka z XML dokumentu</title>
+            <para> V ukázkovém dokumentu je vidět jeden ze záznamů o telefonu.
+                <programlisting language="xml">
+    &lt;device id="1">
+        &lt;brand>Samsung&lt;/brand>
+        &lt;model>
+            &lt;name>Galaxy S10e&lt;/name>
+            &lt;code>SM-G970F&lt;/code>
+        &lt;/model>
+        &lt;releasedate>2019-03-08&lt;/releasedate>
+        &lt;color>Prism Black&lt;/color>
+        &lt;price currency="CZK">9999&lt;/price>
+        &lt;image src="img/SM-G970F.png"/>
+
+        &lt;display>
+            &lt;type>AMOLED&lt;/type>
+            &lt;size>5.8&lt;/size>
+            &lt;resolution>
+                &lt;width>1080&lt;/width>
+                &lt;height>2280&lt;/height>
+                &lt;aspect_ratio>19:9&lt;/aspect_ratio>
+            &lt;/resolution>
+        &lt;/display>
+
+        &lt;chipset>
+            &lt;brand>Samsung&lt;/brand>
+            &lt;model>Exynos 9820&lt;/model>
+            &lt;cores>
+                &lt;core>
+                    &lt;name>Exynos M4&lt;/name>
+                    &lt;frequency unit="GHz">2.73&lt;/frequency>
+                    &lt;quantity>2&lt;/quantity>
+                &lt;/core>
+                &lt;core>
+                    &lt;name>Cortex-A75&lt;/name>
+                    &lt;frequency unit="GHz">2.31&lt;/frequency>
+                    &lt;quantity>2&lt;/quantity>
+                &lt;/core>
+                &lt;core>
+                    &lt;name>Cortex-A55&lt;/name>
+                    &lt;frequency unit="GHz">1.95&lt;/frequency>
+                    &lt;quantity>4&lt;/quantity>
+                &lt;/core>
+            &lt;/cores>
+            &lt;gpu>Mali-G76 MP12&lt;/gpu>
+        &lt;/chipset>
+
+        &lt;cameras>
+            &lt;rear>
+                &lt;camera>
+                    &lt;resolution>12&lt;/resolution>
+                    &lt;focallength>26&lt;/focallength>
+                    &lt;aperture>1.5-2.4&lt;/aperture>
+                    &lt;category>Primární&lt;/category>
+                &lt;/camera>
+
+                &lt;camera>
+                    &lt;resolution>16&lt;/resolution>
+                    &lt;focallength>12&lt;/focallength>
+                    &lt;aperture>2.2&lt;/aperture>
+                    &lt;category>Ultraširoká&lt;/category>
+                &lt;/camera>
+            &lt;/rear>
+
+            &lt;front>
+                &lt;camera>
+                    &lt;resolution>10&lt;/resolution>
+                    &lt;focallength>12&lt;/focallength>
+                    &lt;aperture>1.9&lt;/aperture>
+                &lt;/camera>
+            &lt;/front>
+        &lt;/cameras>
+
+        &lt;memory>
+            &lt;ram unit="GB">6&lt;/ram>
+            &lt;internal unit="GB">128&lt;/internal>
+            &lt;expansionslot>microSDXC&lt;/expansionslot>
+        &lt;/memory>
+
+        &lt;system>
+            &lt;name>Android&lt;/name>
+            &lt;version>9.0&lt;/version>
+            &lt;overlay>One UI 3.0&lt;/overlay>
+        &lt;/system>
+
+        &lt;battery>
+            &lt;size>3100&lt;/size>
+            &lt;charging>
+                &lt;wired>15&lt;/wired>
+                &lt;wireless>15&lt;/wireless>
+            &lt;/charging>
+        &lt;/battery>
+
+        &lt;connectors>
+            &lt;connector>USB-C&lt;/connector>
+            &lt;connector>3.5mm jack&lt;/connector>
+        &lt;/connectors>
+
+        &lt;comms>
+            &lt;comm>Wi-Fi 6&lt;/comm>
+            &lt;comm>Bluetooth 5.0&lt;/comm>
+            &lt;comm>GPS&lt;/comm>
+            &lt;comm>NFC&lt;/comm>
+        &lt;/comms>
+
+        &lt;features>
+            &lt;feature>Čtečka otisků&lt;/feature>
+            &lt;feature>Rychlé nabíjení&lt;/feature>
+            &lt;feature>Bezdrátové nabíjení&lt;/feature>
+            &lt;feature>Hlasový asistent Bixby&lt;/feature>
+            &lt;feature>Samsung Pay&lt;/feature>
+        &lt;/features>
+
+        &lt;body>
+            &lt;dimensions>
+                &lt;height>142.2&lt;/height>
+                &lt;width>69.9&lt;/width>
+                &lt;depth>7.9&lt;/depth>
+            &lt;/dimensions>
+            &lt;weight>150&lt;/weight>
+        &lt;/body>
+
+        &lt;categories>
+            &lt;category>Dotykový&lt;/category>
+        &lt;/categories>
+    &lt;/device>
+                </programlisting>
+            </para>
+        </sect1>
+    </chapter>
+    <chapter>
+        <title>Schémata</title>
+        <para>Tato část obsahuje ukázky obou schémat (XML Schema, Schematron). Ve XML Schema je
+            popsána konstrukce elementů v XML dokumentu, jsou zde zároveň ošetřeny ID telefonů a
+            výrobci pomocí <code>key</code> a <code>keyref</code>. V Schematronu jsou potom ošetřeny
+            prázdné hodnoty a záporná čísla.</para>
+        <sect1>
+            <title>XML Schema</title>
+            <para>XML Schema se nachází v souboru <code>schema.xsd</code>. V uvedené ukázce jsou
+                zapsány kontroly pomocí key a keyref na kontrolu unikátnosti ID, a kontrola jména
+                výrobce. </para>
+            <programlisting language="xml">
+&lt;xs:element name="devices" type="devicesType">
+        &lt;xs:key name="deviceIdKey">
+            &lt;xs:selector xpath="mk:device"/>
+            &lt;xs:field xpath="@id"/>
+        &lt;/xs:key>
+
+        &lt;xs:keyref refer="manufacturersKey" name="brandConfirmation">
+            &lt;xs:selector xpath="mk:device"/>
+            &lt;xs:field xpath="mk:brand"/>
+        &lt;/xs:keyref>
+    &lt;/xs:element>
+&lt;/xs:element>
+
+&lt;xs:complexType name="devicesType">
+        &lt;xs:sequence>
+            &lt;xs:element name="manufacturers" type="manufacturersType">
+                &lt;xs:key name="manufacturersKey">
+                    &lt;xs:selector xpath="mk:manufacturer"/>
+                    &lt;xs:field xpath="."/>
+                &lt;/xs:key>
+            &lt;/xs:element>
+
+            ...
+        &lt;/xs:sequence>
+&lt;/xs:complexType>
+                
+            </programlisting>
+        </sect1>
+
+        <sect1>
+            <title>Schematron</title>
+            <para>Schematron se nachází v souboru <code>schema.sch</code>. Ve Schematronu jsou
+                kontroly ošetřující prázdné stringové elementy a kontroly pro nezápornost čísel. V
+                ukázce je uvedena část kontrolující obě výše zmíněné pro základní informace o
+                telefonu.</para>
+            <programlisting language="xml">
+&lt;sch:pattern>
+    &lt;sch:title>Kontrola základních údajů o telefonu&lt;/sch:title>
+    &lt;sch:rule context="mk:device">
+        &lt;sch:assert test="@id > 0">ID musí být kladné číslo!&lt;/sch:assert>
+        &lt;sch:report test="empty(mk:model/mk:name)">Element name musí obsahovat text!&lt;/sch:report>
+        &lt;sch:report test="empty(mk:model/mk:code)">Element code musí obsahovat text!&lt;/sch:report>
+        &lt;sch:report test="empty(mk:color)">Element color musí obsahovat text!&lt;/sch:report>
+        &lt;sch:assert test="mk:price > 0">Cena musí být kladné číslo!&lt;/sch:assert>
+    &lt;/sch:rule>
+&lt;/sch:pattern>               
+            </programlisting>
+        </sect1>
+    </chapter>
+    <chapter>
+        <title>Transormace do HTML</title>
+        <para>Transformace je uložena v souboru <filename>transformace_html.xsl</filename>, která
+            slouží pro transformaci hlavního XML dokumentu do webové podoby, která je interaktivní
+            (překlikávací menu). V ukázce je začátek transformace, která vytváří základní syntaxi
+            HTML a připojuje styly. Takto potom vypadá stánka pro kazdý jednotlivý telefon. </para>
+        <programlisting language="xml">
+                &lt;xsl:template match="device">
+        &lt;xsl:result-document href="weby_telefony/{generate-id()}.html">
+            &lt;html lang="cs">
+                &lt;head>
+                    &lt;title>
+                        &lt;xsl:value-of select="brand"/>
+                        &lt;xsl:text> &lt;/xsl:text>
+                        &lt;xsl:value-of select="model/name"/>
+                    &lt;/title>
+                    &lt;link rel="stylesheet" href="../css/style.css"/>
+                    &lt;link rel="stylesheet" href="../css/item.css"/>
+                &lt;/head>
+                &lt;body>
+                    &lt;header>Katalog mobilních telefonů&lt;/header>
+                    &lt;a href="../webova_stranka.html"> &#8592; &lt;em>Zpět na katalog&lt;/em>
+                    &lt;/a>
+                    &lt;main>
+                        &lt;div class="mobileTitle">
+                            &lt;h1>
+                                &lt;xsl:value-of select="brand"/>
+                                &lt;xsl:text> &lt;/xsl:text>
+                                &lt;xsl:value-of select="model/name"/>
+                            &lt;/h1>
+                            &lt;div class="modelCode">
+                                &lt;xsl:text>[&lt;/xsl:text>
+                                &lt;xsl:value-of select="model/code"/>
+                                &lt;xsl:text>]&lt;/xsl:text>
+                            &lt;/div>
+                        &lt;/div>
+                        &lt;div class="additionalInfo"> &lt;/div>
+                        &lt;xsl:apply-templates/>
+                    &lt;/main>
+                    &lt;footer> Vojtěch Nerad [nerv01@vse.cz] &lt;/footer>
+                &lt;/body>
+            &lt;/html>
+        &lt;/xsl:result-document>
+    &lt;/xsl:template>
+        </programlisting>
+        <sect1>
+            <title>Kaskádové styly</title>
+            <para>Nacházejí se v souboru <filename>css/style.css</filename> a
+                    <filename>css/item.css</filename>. Vužívají se při stylování HTML stránky, aby
+                data byla více přehledná při prezentaci uživateli. V ukázce je zobrazen hlavní
+                styl.</para>
+
+            <programlisting language="css">
+@import url('https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap');
+
+body {
+    background-color: lightgray;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.item {
+    padding: 5px;
+    padding-left: 20px;
+    font-size: 30px;    
+}
+
+footer {
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+}
+            </programlisting>
+        </sect1>
+    </chapter>
+    <chapter>
+        <title>Transformace do PDF</title>
+        <para>Transformace se nachází v souboru <filename>transformace_pdf.xsl</filename>. Po
+            spušení transformace na XML dokument vznikne pomocný soubor
+                <filename>transformace_pdf.fo</filename> ze kterého následně vznikne výsledný PDF
+            dokument. PDF dokument obsahuje titulní stranu, kilací obsah a výpis pro jednotlivé
+            telefony. V ukázce je kód vytvářející ID, umožňující tvorbu interaktivního
+            obsahu.</para>
+        <sect1>
+            <title>Ukázka transformace do PDF</title>
+            
+            <programlisting language="xml">
+&lt;xsl:template match="/">
+		...
+                    &lt;fo:block>
+                        &lt;xsl:for-each select="devices/device">                                
+                            &lt;fo:block text-align="justify">
+                                &lt;fo:basic-link internal-destination="{generate-id(.)}">
+                                    &lt;xsl:value-of select="brand"/>
+                                    &lt;xsl:text> &lt;/xsl:text>
+                                    &lt;xsl:value-of select="model/name"/>
+                                &lt;/fo:basic-link>
+                             &lt;fo:leader leader-pattern="dots"/>
+
+                                &lt;fo:page-number-citation ref-id="{generate-id(.)}"/>
+                            &lt;/fo:block>
+                        &lt;/xsl:for-each>
+                    &lt;/fo:block>
+                &lt;/fo:block>
+		...
+&lt;/xsl:template>
+
+&lt;xsl:template match="device">
+    &lt;fo:block id="{generate-id(.)}" break-before="page" font-weight="bold" font-size="200%">
+        &lt;xsl:value-of select="brand"/>
+        &lt;xsl:text> &lt;/xsl:text>
+        &lt;xsl:value-of select="model/name"/>
+    &lt;/fo:block>
+
+    &lt;xsl:apply-templates/>
+&lt;/xsl:template>
+            </programlisting>
+        </sect1>
+    </chapter>
+</book>

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://example.com/nerv01/mobilni-katalog schema.xsd"
+    xmlns="http://example.com/nerv01/mobilni-katalog">
+
+    <manufacturers>
+        <manufacturer>Samsung</manufacturer>
+        <manufacturer>Apple</manufacturer>
+        <manufacturer>OnePlus</manufacturer>
+        <manufacturer>Nokia</manufacturer>
+        <manufacturer>Cat</manufacturer>
+    </manufacturers>
+
+    <device id="1">
+        <brand>Samsung</brand>
+        <model>
+            <name>Galaxy S10e</name>
+            <code>SM-G970F</code>
+        </model>
+        <releasedate>2019-03-08</releasedate>
+        <color>Prism Black</color>
+        <price currency="CZK">9999</price>
+        <image src="img/SM-G970F.png"/>
+
+        <display>
+            <type>AMOLED</type>
+            <size>5.8</size>
+            <resolution>
+                <width>1080</width>
+                <height>2280</height>
+                <aspect_ratio>19:9</aspect_ratio>
+            </resolution>
+        </display>
+
+        <chipset>
+            <brand>Samsung</brand>
+            <model>Exynos 9820</model>
+            <cores>
+                <core>
+                    <name>Exynos M4</name>
+                    <frequency unit="GHz">2.73</frequency>
+                    <quantity>2</quantity>
+                </core>
+                <core>
+                    <name>Cortex-A75</name>
+                    <frequency unit="GHz">2.31</frequency>
+                    <quantity>2</quantity>
+                </core>
+                <core>
+                    <name>Cortex-A55</name>
+                    <frequency unit="GHz">1.95</frequency>
+                    <quantity>4</quantity>
+                </core>
+            </cores>
+            <gpu>Mali-G76 MP12</gpu>
+        </chipset>
+
+        <cameras>
+            <rear>
+                <camera>
+                    <resolution>12</resolution>
+                    <focallength>26</focallength>
+                    <aperture>1.5-2.4</aperture>
+                    <category>Primární</category>
+                </camera>
+
+                <camera>
+                    <resolution>16</resolution>
+                    <focallength>12</focallength>
+                    <aperture>2.2</aperture>
+                    <category>Ultraširoká</category>
+                </camera>
+            </rear>
+
+            <front>
+                <camera>
+                    <resolution>10</resolution>
+                    <focallength>12</focallength>
+                    <aperture>1.9</aperture>
+                </camera>
+            </front>
+        </cameras>
+
+        <memory>
+            <ram unit="GB">6</ram>
+            <internal unit="GB">128</internal>
+            <expansionslot>microSDXC</expansionslot>
+        </memory>
+
+        <system>
+            <name>Android</name>
+            <version>9.0</version>
+            <overlay>One UI 3.0</overlay>
+        </system>
+
+        <battery>
+            <size>3100</size>
+            <charging>
+                <wired>15</wired>
+                <wireless>15</wireless>
+            </charging>
+        </battery>
+
+        <connectors>
+            <connector>USB-C</connector>
+            <connector>3.5mm jack</connector>
+        </connectors>
+
+        <comms>
+            <comm>4G LTE</comm>
+            <comm>Wi-Fi 6</comm>
+            <comm>Bluetooth 5.0</comm>
+            <comm>GPS</comm>
+            <comm>NFC</comm>
+        </comms>
+
+        <features>
+            <feature>Čtečka otisků</feature>
+            <feature>Rychlé nabíjení</feature>
+            <feature>Bezdrátové nabíjení</feature>
+            <feature>Hlasový asistent Bixby</feature>
+            <feature>Samsung Pay</feature>
+        </features>
+
+        <body>
+            <dimensions>
+                <height>142.2</height>
+                <width>69.9</width>
+                <depth>7.9</depth>
+            </dimensions>
+            <weight>150</weight>
+        </body>
+
+        <categories>
+            <category>Dotykový</category>
+        </categories>
+    </device>
+
+    <device id="2">
+        <brand>Apple</brand>
+        <model>
+            <name>iPhone 11</name>
+            <code>A2221</code>
+        </model>
+        <releasedate>2019-09-10</releasedate>
+        <color>Red</color>
+        <price currency="EUR">600</price>
+        <image src="img/A2221.png"/>           
+
+        <display>
+            <type>Liquid Retina IPS LCD</type>
+            <size>6.1</size>
+            <resolution>
+                <width>828</width>
+                <height>1792</height>
+                <aspect_ratio>19.5:9</aspect_ratio>
+            </resolution>
+        </display>
+
+        <chipset>
+            <brand>Apple</brand>
+            <model>A13 Bionic</model>
+            <cores>
+                <core>
+                    <name>Apple Thunder</name>
+                    <frequency unit="GHz">1.8</frequency>
+                    <quantity>4</quantity>
+                </core>
+                <core>
+                    <name>Apple Lightning</name>
+                    <frequency unit="GHz">2.65</frequency>
+                    <quantity>2</quantity>
+                </core>
+            </cores>
+            <gpu>Apple A13 Bionic GPU</gpu>
+        </chipset>
+
+        <cameras>
+            <rear>
+                <camera>
+                    <resolution>12</resolution>
+                    <focallength>26</focallength>
+                    <aperture>1.8</aperture>
+                    <category>Primární</category>
+                </camera>
+
+                <camera>
+                    <resolution>12</resolution>
+                    <focallength>13</focallength>
+                    <aperture>2.4</aperture>
+                    <category>Ultraširoká</category>
+                </camera>
+            </rear>
+
+            <front>
+                <camera>
+                    <resolution>12</resolution>
+                    <focallength>23</focallength>
+                    <aperture>2.2</aperture>
+                </camera>
+            </front>
+        </cameras>
+
+        <memory>
+            <ram unit="GB">4</ram>
+            <internal unit="GB">64</internal>
+        </memory>
+
+        <system>
+            <name>iOS</name>
+            <version>13</version>
+        </system>
+
+        <battery>
+            <size>3110</size>
+            <charging>
+                <wired>18</wired>
+                <wireless>7.5</wireless>
+            </charging>
+        </battery>
+
+        <connectors>
+            <connector>Lightning</connector>
+        </connectors>
+
+        <comms>
+            <comm>4G LTE</comm>
+            <comm>Wi-Fi 6</comm>
+            <comm>Bluetooth 5.0</comm>
+            <comm>GPS</comm>
+            <comm>NFC</comm>
+        </comms>
+
+        <features>
+            <feature>Face ID</feature>
+            <feature>Rychlé nabíjení</feature>
+            <feature>Bezdrátové nabíjení</feature>
+            <feature>Hlasový asistent Siri</feature>
+            <feature>Apple Pay</feature>
+        </features>
+
+        <body>
+            <dimensions>
+                <height>150.9</height>
+                <width>75.7</width>
+                <depth>8.3</depth>
+            </dimensions>
+            <weight>194</weight>
+        </body>
+
+        <categories>
+            <category>Dotykový</category>
+        </categories>
+    </device>
+
+    <device id="3">
+        <brand>Nokia</brand>
+        <model>
+            <name>6310 (2021)</name>
+            <code>TA-1400</code>
+        </model>
+        <releasedate>2021-08-27</releasedate>
+        <color>Green</color>
+        <price currency="CZK">2000</price>
+        <image src="img/TA-1400.png"/>
+
+        <display>
+            <type>TFT</type>
+            <size>2.8</size>
+            <resolution>
+                <width>240</width>
+                <height>320</height>
+                <aspect_ratio>4:3</aspect_ratio>
+            </resolution>
+        </display>
+
+        <chipset>
+            <brand>Unisoc</brand>
+            <model>6531F</model>
+            <cores>
+                <core>
+                    <name>ARM926EJ-S</name>
+                    <frequency unit="MHz">208</frequency>
+                    <quantity>1</quantity>
+                </core>
+            </cores>
+            <gpu>SC6531 GPU</gpu>
+        </chipset>
+
+        <cameras>
+            <rear>
+                <camera>
+                    <resolution>0.3</resolution>
+                    <category>Primární</category>
+                </camera>
+            </rear>
+        </cameras>
+
+        <memory>
+            <ram unit="MB">8</ram>
+            <internal unit="MB">16</internal>
+            <expansionslot>microSDHC</expansionslot>
+        </memory>
+
+        <system>
+            <name>Series</name>
+            <version>30+</version>
+        </system>
+
+        <battery>
+            <size>1150</size>
+            <charging>
+                <wired>18</wired>
+            </charging>
+        </battery>
+
+        <connectors>
+            <connector>microUSB</connector>
+            <connector>3.5mm jack</connector>
+        </connectors>
+
+        <comms>
+            <comm>2G GSM</comm>
+            <comm>Wi-Fi 6</comm>
+            <comm>Bluetooth 5.0</comm>
+            <comm>GPS</comm>
+            <comm>NFC</comm>
+        </comms>
+
+        <features>
+            <feature>Face ID</feature>
+            <feature>Rychlé nabíjení</feature>
+            <feature>Bezdrátové nabíjení</feature>
+            <feature>Hlasový asistent Siri</feature>
+            <feature>Apple Pay</feature>
+        </features>
+
+        <body>
+            <dimensions>
+                <height>142.2</height>
+                <width>69.9</width>
+                <depth>7.9</depth>
+            </dimensions>
+            <weight>150</weight>
+        </body>
+
+        <categories>
+            <category>Tlačítkový</category>
+        </categories>
+    </device>
+
+    <device id="4">
+        <brand>Cat</brand>
+        <model>
+            <name>S42 H+</name>
+            <code>S42 H+</code>
+        </model>
+        <releasedate>2021-04-20</releasedate>
+        <color>Black</color>
+        <price currency="CZK">6000</price>
+        <image src="img/S42Hplus.png"/>
+
+        <display>
+            <type>IPS LCD</type>
+            <size>5.5</size>
+            <resolution>
+                <width>720</width>
+                <height>1440</height>
+                <aspect_ratio>18:9</aspect_ratio>
+            </resolution>
+        </display>
+
+        <chipset>
+            <brand>Mediatek</brand>
+            <model>MT6761D Helio A20</model>
+            <cores>
+                <core>
+                    <name>Cortex-A53</name>
+                    <frequency unit="GHz">1.8</frequency>
+                    <quantity>4</quantity>
+                </core>
+            </cores>
+            <gpu>PowerVR GE8320</gpu>
+        </chipset>
+
+        <cameras>
+            <rear>
+                <camera>
+                    <resolution>13</resolution>
+                    <aperture>2.0</aperture>
+                    <category>Primární</category>
+                </camera>
+            </rear>
+            <front>
+                <camera>
+                    <resolution>5</resolution>
+                </camera>
+            </front>
+        </cameras>
+
+        <memory>
+            <ram unit="GB">3</ram>
+            <internal unit="GB">32</internal>
+            <expansionslot>microSDXC</expansionslot>
+        </memory>
+
+        <system>
+            <name>Android</name>
+            <version>10</version>
+        </system>
+
+        <battery>
+            <size>4200</size>
+            <charging>
+                <wired>10</wired>
+            </charging>
+        </battery>
+
+        <connectors>
+            <connector>microUSB</connector>
+            <connector>3.5mm jack</connector>
+        </connectors>
+
+        <comms>
+            <comm>4G LTE</comm>
+            <comm>Wi-Fi 802.11 b/g/n</comm>
+            <comm>Bluetooth 5.0</comm>
+            <comm>GPS</comm>
+            <comm>NFC</comm>
+        </comms>
+
+        <features>
+            <feature>Vojenská certifikace MIL-SPEC-810H</feature>
+            <feature>Google Pay</feature>
+        </features>
+
+        <body>
+            <dimensions>
+                <height>161.3</height>
+                <width>77.2</width>
+                <depth>12.7</depth>
+            </dimensions>
+            <weight>220</weight>
+        </body>
+
+        <categories>
+            <category>Dotykový</category>
+            <category>Chytrý</category>
+            <category>Odolný</category>
+        </categories>
+    </device>
+    
+    <device id="5">
+        <brand>Apple</brand>
+        <model>
+            <name>iPhone 13 Pro Max</name>
+            <code>A2643</code>
+        </model>
+        <releasedate>2021-10-14</releasedate>
+        <color>Sierra Blue</color>
+        <price currency="USD">1400</price>
+        <image src="img/A2643.png"/>        
+        
+        <display>
+            <type>Super Retina XDR OLED</type>
+            <size>6.7</size>
+            <resolution>
+                <width>1284</width>
+                <height>2778</height>
+                <aspect_ratio>19.5:9</aspect_ratio>
+            </resolution>
+        </display>
+        
+        <chipset>
+            <brand>Apple</brand>
+            <model>A15 Bionic</model>
+            <cores>
+                <core>
+                    <name>Avalanche</name>
+                    <frequency unit="MHz">3223</frequency>
+                    <quantity>2</quantity>
+                </core>
+                <core>
+                    <name>Blizzard</name>
+                    <frequency unit="MHz">1820</frequency>
+                    <quantity>4</quantity>
+                </core>
+            </cores>
+            <gpu>Apple GPU</gpu>
+        </chipset>
+        
+        <cameras>
+            <rear>
+                <camera>
+                    <resolution>12</resolution>
+                    <focallength>26</focallength>
+                    <aperture>1.5</aperture>                    
+                    <category>Primární</category>
+                </camera>
+                
+                <camera>
+                    <resolution>12</resolution>
+                    <focallength>77</focallength>
+                    <aperture>2.8</aperture>                    
+                    <category>Telephoto</category>
+                </camera>
+                
+                <camera>
+                    <resolution>12</resolution>
+                    <focallength>13</focallength>
+                    <aperture>1.8</aperture>                    
+                    <category>Širokoúhlá</category>
+                </camera>
+            </rear>
+            <front>
+                <camera>
+                    <resolution>12</resolution>
+                    <focallength>23</focallength>
+                    <aperture>2.2</aperture>                       
+                </camera>
+            </front>
+        </cameras>
+        
+        <memory>
+            <ram unit="GB">6</ram>
+            <internal unit="GB">512</internal>            
+        </memory>
+        
+        <system>
+            <name>iOS</name>
+            <version>15</version>
+        </system>
+        
+        <battery>
+            <size>4352</size>
+            <charging>
+                <wired>27</wired>
+                <wireless>15</wireless>
+            </charging>
+        </battery>
+        
+        <connectors>
+            <connector>Lightning</connector>            
+        </connectors>
+        
+        <comms>
+            <comm>5G</comm>
+            <comm>4G LTE</comm>
+            <comm>Wi-Fi 802.11 b/g/n/ac/6</comm>
+            <comm>Bluetooth 5.0</comm>
+            <comm>GPS</comm>
+            <comm>NFC</comm>
+        </comms>
+        
+        <features>
+            <feature>Face ID</feature>
+            <feature>Rychlé nabíjení</feature>
+            <feature>Bezdrátové nabíjení</feature>
+            <feature>MagSage</feature>
+            <feature>Hlasový asistent Siri</feature>
+            <feature>Apple Pay</feature>
+        </features>
+        
+        <body>
+            <dimensions>
+                <height>160.8</height>
+                <width>78.1</width>
+                <depth>7.7</depth>
+            </dimensions>
+            <weight>240</weight>
+        </body>
+        
+        <categories>
+            <category>Dotykový</category>
+            <category>Chytrý</category>            
+        </categories>
+    </device>
+</devices>
